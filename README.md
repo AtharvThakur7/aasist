@@ -191,6 +191,12 @@ It shows EER: 0.83%, min t-DCF: 0.0275
 
 
 
+## Assumptions Made
 
+- Epoch count was kept low (e.g., 3) to reduce runtime under constraints
+- Dataset is assumed to be pre-downloaded and correctly structured
+- Pretrained weights not used; trained from scratch
+- SWA is used selectively when updates are made
+- Real-time system not required for this phase
 
 
