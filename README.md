@@ -94,6 +94,30 @@ To select the most suitable models for detecting AI-generated speech in real-wor
 - More complex training process, harder to iterate quickly.
 
 
+
+##  Final Model Selection: AASIST — The Ideal Fit for Audio Deepfake Detection
+
+ AASIST (Audio Anti-Spoofing using Integrated Spectro-Temporal Graph) is selected as the best fit for our specific goals and real-world application needs.
+
+ ### Why AASIST Stands Out ?
+
+-  Accurate Detection of AI-Generated Human Speech :
+AASIST delivers exceptional performance in detecting synthetic or manipulated speech. With an Equal Error Rate (EER) of just 0.83%, it ranks among the most accurate models in the field.
+
+- Real-Time or Near Real-Time Feasibility :
+AASIST strikes an excellent balance between speed and accuracy. Its efficient architecture makes it suitable for real-time or near real-time applications.
+
+-  Robust in Real-World Conversations:
+AASIST is highly resilient to background noise, microphone variability, and long-form speech, making it ideal for analyzing natural, unscripted conversations .
+
+- Strong Generalization Across Attack Types:
+Using spectro-temporal graph attention network, AASIST learns both local and global dependencies in speech  enables it to effectively detect a broad spectrum of deepfake techniques and unseen attacks.
+
+ - No Handcrafted Feature Engineering Required:
+Replaces the  traditional manual feature extraction and  allows for greater scalability and adaptability to diverse datasets without redesigning the input pipeline.
+
+
+
 ## 📊 Model Comparison Table
 
 | Model               | Key Innovation                                      | Deepfake Detection Accuracy           | Real-Time Feasibility         | Handles Real Conversations (Noise, Variations, Long Speech) | Best Use Case                     |
