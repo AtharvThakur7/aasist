@@ -149,14 +149,14 @@ python ./download_dataset.py
 ```
 
 Ensure the structure:
-
+```bash
 ASVspoof2019/
 └── LA/
     ├── ASVspoof2019_LA_train/
     ├── ASVspoof2019_LA_dev/
     ├── ASVspoof2019_LA_eval/
     └── ASVspoof2019_LA_cm_protocols/
-
+```
 Training
 The main.py includes train/validation/evaluation.
 
