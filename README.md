@@ -127,5 +127,49 @@ Replaces the  traditional manual feature extraction and  allows for greater scal
 |  **Dual-Branch Net**| Multi-task learning (Utterance + Segment-Level)     | ✅✅✅ **EER = 0.80% (Most Accurate)**   | ⏳ Slower (computational cost) | ✅✅✅ Great (Adapts well to new & varied AI speech)          | **Best for Learning New Attacks**|
 
 
+## Implementation & Setup
+
+This project implements the AASIST model — a graph attention-based architecture designed to detect spoofed audio in the ASVspoof2019-LA dataset. The codebase supports training, evaluation, logging, model checkpointing, and reproducibility-focused research workflows.
+
+
+Clone the Repository 
+```bash
+  python manage.py runserver
+```
+
+Installing dependencies
+```bash
+pip install -r requirements.txt
+```
+
+Data preparation
+We train/validate/evaluate AASIST using the ASVspoof 2019 logical access dataset .
+```bash
+python ./download_dataset.py
+```
+
+Training
+The main.py includes train/validation/evaluation.
+
+To train AASIST :
+```bash
+python main.py --config ./config/AASIST.conf
+```
+
+To evaluate AASIST :
+
+```bash
+python main.py --eval --config ./config/AASIST.conf
+```
+
+Your Final Output : 
+
+```bash
+It shows EER: 0.83%, min t-DCF: 0.0275
+```
+
+
+
+
 
 
