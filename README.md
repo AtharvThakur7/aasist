@@ -98,9 +98,9 @@ To select the most suitable models for detecting AI-generated speech in real-wor
 
 | Model               | Key Innovation                                      | Deepfake Detection Accuracy           | Real-Time Feasibility         | Handles Real Conversations (Noise, Variations, Long Speech) | Best Use Case                     |
 |--------------------|-----------------------------------------------------|---------------------------------------|-------------------------------|--------------------------------------------------------------|----------------------------------|
-| 🏆 **AASIST**        | Spectro-Temporal Graph Attention Networks           | ✅✅✅ **EER = 0.83%**                   | ✅✅ Moderate                  | ✅✅✅ **Best** (Handles noise, mic variation & long speech)   | **Best Overall for Momenta**     |
-| ⚡ **RawNet3**       | Raw waveform processing (no feature extraction)     | ✅✅ **EER = 1.12%**                    | ✅✅✅ **Fastest**              | ✅ Good (less effective on longer conversations)             | **Best for Real-Time Processing**|
-| 🧠 **Dual-Branch Net**| Multi-task learning (Utterance + Segment-Level)     | ✅✅✅ **EER = 0.80% (Most Accurate)**   | ⏳ Slower (computational cost) | ✅✅✅ Great (Adapts well to new & varied AI speech)          | **Best for Learning New Attacks**|
+|  **AASIST**        | Spectro-Temporal Graph Attention Networks           | ✅✅✅ **EER = 0.83%**                   | ✅✅ Moderate                  | ✅✅✅ **Best** (Handles noise, mic variation & long speech)   | **Best Overall for Momenta**     |
+| **RawNet3**       | Raw waveform processing (no feature extraction)      | ✅✅ **EER = 1.12%**                    | ✅✅✅ **Fastest**              | ✅ Good (less effective on longer conversations)             | **Best for Real-Time Processing**|
+|  **Dual-Branch Net**| Multi-task learning (Utterance + Segment-Level)     | ✅✅✅ **EER = 0.80% (Most Accurate)**   | ⏳ Slower (computational cost) | ✅✅✅ Great (Adapts well to new & varied AI speech)          | **Best for Learning New Attacks**|
 
 
 
