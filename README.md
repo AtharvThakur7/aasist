@@ -7,8 +7,7 @@ The goal of this project is to detect AI-generated human speech and explore deep
 #  Model Selection Goal: 
 
 The goal is to identify the top 3 audio deepfake detection models that best meet Momenta’s core requirements:
-
- - High Accuracy in Detecting AI-Generated Speech : 
+- High Accuracy in Detecting AI-Generated Speech : 
 Must handle various deepfake types (TTS, VC) with strong robustness.
 
 - Real-Time or Near Real-Time Capability : 
@@ -85,7 +84,7 @@ To select the most suitable models for detecting AI-generated speech in real-wor
 - Real-Time Feasibility:  Moderate
 
 ### Relevance to Momenta's Use Case: 
--The fusion of diverse features can improve the detection of various types of AI-generated speech, which is beneficial for analyzing real conversations.
+- The fusion of diverse features can improve the detection of various types of AI-generated speech, which is beneficial for analyzing real conversations.
 - Best generalization across unseen attacks and speaker variations.
 
 ### Limitations:
@@ -206,7 +205,7 @@ It shows EER: 0.83%, min t-DCF: 0.0275
 AASIST was selected after a careful evaluation of multiple state-of-the-art models due to its ideal alignment with our primary goals:
 
 - Detecting AI-generated human speech with high accuracy (EER = 0.83%)
--Supporting real-time or near real-time detection, striking a balance between speed and accuracy
+- Supporting real-time or near real-time detection, striking a balance between speed and accuracy
 - Performing well on real-world conversations, showing resilience to noise, microphone variations, and longer speech sequences
 
 Compared to other models, AASIST offers the best trade-off between performance, generalizability, and practical deployment readiness. It does not overfit to specific attack types and works well even in unseen conditions, which is critical in an evolving threat landscape.
@@ -277,7 +276,7 @@ Compared to other models, AASIST offers the best trade-off between performance, 
 - Advanced Data Augmentation: Time stretching, pitch shifting, and synthetic augmentation.
 - Semi-supervised Learning: Use unlabeled real-world audio to fine-tune the model post-deployment.
   
-####Q4: How would you approach deploying this model in a production environment?
+#### Q4: How would you approach deploying this model in a production environment?
 To deploy the AASIST model in a production environment, Docker provides a reliable, reproducible, and portable solution. Here's the approach:
 ##### Docker-Based Deployment Strategy
 **Containerization**:
