@@ -176,6 +176,18 @@ Your Final Output :
 ```bash
 It shows EER: 0.83%, min t-DCF: 0.0275
 ```
+## 🧩 Challenges Encountered & Solutions
+
+| **Challenge**             | **Description**                                                                 | **How It Was Addressed**                                                                 |
+|---------------------------|----------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------|
+| **Slow Training**         | Full training epochs were too time-consuming for testing/tuning.               | Reduced `num_epochs` to 4 and enabled `torch.backends.cudnn.benchmark` for faster training. |
+| **Unclear Defaults**      | Flags like `eval_all_best` and `freq_aug` were missing in some configs.        | Added fallback logic with safe defaults (`True`, `False`) for robustness.                |
+| **GPU Dependency**        | The original script assumed CUDA availability.                                 | Introduced device check with fallback to CPU, including warning messages and safe exit.  |
+| **Evaluation Delay**      | Evaluation was slow and only useful after meaningful training.                 | Delayed evaluation to run only after best-dev checkpoints were found.                    |
+| **Reproducibility**       | Randomness in data loading made it difficult to compare experiment runs.       | Used `torch.Generator`, `seed_worker`, and fixed random seeds for consistency.           |
+| **Model Save Management** | Needed to separate best and final model checkpoints.                           | Saved models per epoch, `best-dev`, SWA-averaged, and `best-eval` with clear tags.       |
+| **Metric Tracking**       | No persistent way to track loss or EER across epochs.                          | Used TensorBoard and flat file logs (`metric_log.txt`, `t-DCF_EER.txt`).                 |
+
 
 
 
